@@ -20,10 +20,11 @@
         %ul.right
           %li
             = link_to 'My Account', user_url(User.last.id)
+
     .row
       .large-12.columns
-        %p.notice= notice
-        %p.alert= alert
+        %p.notice= notice unless notice.blank?
+        %p.alert= alert unless alert.blank?
     .row
       .large-12.columns
         = yield
