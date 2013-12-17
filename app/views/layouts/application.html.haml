@@ -20,7 +20,7 @@
         %ul.right
           -if user_signed_in?
             %li
-              = link_to 'My Account', user_url(User.last.id)
+              = link_to 'My Account', user_url(current_user.id)
             %li
               = link_to 'Edit Profile', edit_user_registration_path
             %li
@@ -40,3 +40,7 @@
         = yield
 
         = javascript_include_tag "application"
+  %div
+    = current_user.name
+    <br>
+    = current_user.email
