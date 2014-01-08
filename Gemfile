@@ -16,8 +16,11 @@ gem 'pry'
 
 gem "fog", "~> 1.3.1"
 
+
 group :development do 
 	gem 'figaro'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use sqlite3 as the database for Active Record
